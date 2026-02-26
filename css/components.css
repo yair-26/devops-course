@@ -1,0 +1,135 @@
+/* Reusable Components */
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: #00FF00;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #00FF00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00FF00;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+}
+
+.btn:hover {
+    background: rgba(0, 255, 0, 0.1);
+    text-shadow: 0 0 20px #00FF00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), inset 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn.btn-primary {
+    background: rgba(0, 255, 0, 0.1);
+    border-color: #00FF00;
+}
+
+.btn.btn-secondary {
+    border-color: #00FF00;
+    color: #00FF00;
+}
+
+.tag {
+    display: inline-block;
+    background: rgba(0, 255, 0, 0.2);
+    color: #00FF00;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #00FF00;
+    border-radius: 0;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px #00FF00;
+    transition: all 0.3s;
+}
+
+.tag:hover {
+    background: rgba(0, 255, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.card {
+    background: rgba(0, 255, 0, 0.05);
+    border: 2px solid #00FF00;
+    border-radius: 0;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(0, 255, 0, 0.05);
+    transition: all 0.3s;
+    padding: 2rem;
+}
+
+.card:hover {
+    box-shadow: 0 0 40px rgba(0, 255, 0, 0.4), inset 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.card h3 {
+    color: #00FF00;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+.success-message {
+    background: rgba(0, 255, 0, 0.2);
+    color: #00FF00;
+    padding: 1rem;
+    border: 2px solid #00FF00;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: center;
+    animation: slideUp 0.3s ease-out;
+}
+
+.error-message {
+    background: rgba(255, 0, 0, 0.2);
+    color: #FF0000;
+    padding: 1rem;
+    border: 2px solid #FF0000;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00FF00;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-auto {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

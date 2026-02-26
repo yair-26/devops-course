@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yair Ashwal - DevOps Engineer</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Components & Layout -->
+    <link rel="stylesheet" href="css/components.css">
+    <!-- Section Styles -->
+    <link rel="stylesheet" href="css/sections.css">
+    <!-- Animations -->
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- Responsive Design -->
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- Matrix Background Effect -->
@@ -139,8 +148,22 @@
         <div class="container">
             <h2>[ CONTACT ]</h2>
             <p>I'm always interested in hearing about exciting DevOps opportunities and challenges.</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
             <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="btn">Email Me</a>
                 <a href="https://github.com" class="btn" target="_blank">GitHub</a>
                 <a href="https://linkedin.com" class="btn" target="_blank">LinkedIn</a>
             </div>
@@ -154,39 +177,7 @@
         </div>
     </footer>
 
-    <script>
-        // Matrix Rain Animation
-        const canvas = document.getElementById('matrix');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const chars = '01アウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-        const fontSize = 16;
-        const columns = Math.floor(canvas.width / fontSize);
-        const drops = Array(columns).fill(0);
-
-        function draw() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#00FF00';
-            ctx.font = fontSize + 'px monospace';
-
-            for (let i = 0; i < drops.length; i++) {
-                const char = chars.charAt(Math.floor(Math.random() * chars.length));
-                ctx.fillText(char, i * fontSize, drops[i] * fontSize);
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-
-        setInterval(draw, 50);
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-    </script>
+    <!-- Business Logic Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
